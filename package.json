@@ -1,0 +1,30 @@
+{
+  "name": "frontend-landingpage-scss",
+  "version": "1.0.0",
+  "description": "Landing Page hecho con SCSS para Frontent Mentor ",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ferchuzzito/FrontEnd-LandingPage-SCSS.git"
+  },
+  "author": "Fernando Leon",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "autoprefixer": "^10.3.7",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-purge-sourcemaps": "^1.0.0",
+    "gulp-purgecss": "^4.0.3",
+    "sass": "^1.42.1"
+  },
+  "bugs": {
+    "url": "https://github.com/ferchuzzito/FrontEnd-LandingPage-SCSS/issues"
+  },
+  "homepage": "https://github.com/ferchuzzito/FrontEnd-LandingPage-SCSS#readme"
+}
