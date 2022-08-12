@@ -1,0 +1,114 @@
+@use "base/utility" as u;
+@use "base/variables" as v;
+
+body {
+  background-color: v.$White;
+  font-family: v.$Body-Font;
+  color: v.$Very-Dark-Cyan;
+}
+
+.main-container {
+  @include u.mobile {
+    margin: 0 auto 2.5rem;
+  }
+  @include u.desktop {
+    margin: 0 auto 2.5rem;
+  }
+}
+
+.navbar {
+  @include u.mobile {
+    @include u.Flex(flex, space-between, center);
+    margin: 2rem 2rem;
+    padding: 2rem 2rem;
+  }
+  &__logo {
+    @include u.mobile {
+      width: 9.5rem;
+      height: 1.6rem;
+    }
+    @include u.desktop {
+      width: 24rem;
+      height: 3.8rem;
+    }
+  }
+  &__btn {
+    background-color: v.$White;
+    border: none;
+    border: 1px solid v.$Light-Pink;
+    border-radius: 5rem;
+    color: v.$Light-Pink;
+    font-weight: 700;
+    display: block;
+    width: 8rem;
+    height: 2.4rem;
+    @include u.desktop {
+      width: 13.4rem;
+      height: 4.2rem;
+    }
+    &:hover {
+      background-color: v.$Light-Pink;
+      color: v.$White;
+      cursor: pointer;
+    }
+  }
+}
+
+.header {
+  &__title {
+    font-family: v.$Heading-Font;
+    text-align: center;
+    width: 26.5rem;
+    margin: 0 auto 3.6rem;
+    font-size: 1.48em;
+    @include u.desktop {
+      width: 101rem;
+      height: unset;
+      font-size: 2.98em;
+    }
+  }
+  &__description {
+    text-align: center;
+    margin: 0 auto 4.9rem;
+    font-weight: 600;
+    font-size: 1em;
+    width: 29rem;
+    @include u.desktop {
+      width: 59rem;
+      height: 8rem;
+      font-size: 1.25em;
+    }
+  }
+  &__btn {
+    background-color: v.$Pink;
+    border: none;
+    border: 1px solid unset;
+    border-radius: 5rem;
+    color: v.$Very-Pale-Blue;
+    font-weight: 700;
+    display: block;
+    width: 20rem;
+    height: 4rem;
+    margin: 0 auto;
+    margin-bottom: 8rem;
+    &:hover {
+      background-color: v.$Light-Pink;
+      color: v.$White;
+      cursor: pointer;
+    }
+    @include u.desktop {
+      width: 40rem;
+      height: 8rem;
+      font-size: 1.25em;
+    }
+  }
+  &__img-mockups {
+    display: block;
+    width: 30rem;
+    margin: 0 auto 13.8rem;
+    @include u.desktop {
+      width: 102rem;
+      height: 72.5rem;
+    }
+  }
+}
