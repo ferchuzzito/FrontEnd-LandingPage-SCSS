@@ -40,8 +40,10 @@ body {
     color: v.$Light-Pink;
     font-weight: 700;
     display: block;
-    width: 8rem;
-    height: 2.4rem;
+    @include u.mobile {
+      width: 8rem;
+      height: 2.4rem;
+    }
     @include u.desktop {
       width: 13.4rem;
       height: 4.2rem;
@@ -58,9 +60,11 @@ body {
   &__title {
     font-family: v.$Heading-Font;
     text-align: center;
-    width: 26.5rem;
     margin: 0 auto 3.6rem;
-    font-size: 1.48em;
+    @include u.mobile {
+      width: 26.5rem;
+      font-size: 1.48em;
+    }
     @include u.desktop {
       width: 101rem;
       height: unset;
@@ -71,8 +75,10 @@ body {
     text-align: center;
     margin: 0 auto 4.9rem;
     font-weight: 600;
-    font-size: 1em;
-    width: 29rem;
+    @include u.mobile {
+      font-size: 1em;
+      width: 29rem;
+    }
     @include u.desktop {
       width: 59rem;
       height: 8rem;
@@ -112,3 +118,179 @@ body {
     }
   }
 }
+
+.section-stats {
+  display: flex;
+  @include u.mobile {
+    background-image: url(unset), url(../images/bg-section-top-mobile-1.svg);
+    @include u.Flex(null, null, center, column);
+  }
+  @include u.desktop {
+    background-image: url(unset), url(../images/bg-section-top-desktop-1.svg);
+    @include u.Flex(null, space-around, null);
+    height: 80rem;
+    margin-bottom: 0;
+  }
+  background-repeat: no-repeat;
+  background-position-y: top, bottom;
+}
+
+.comunities {
+  margin-bottom: 9.8rem;
+  @include u.mobile {
+    &__logo {
+      width: 3.2rem;
+    }
+
+    &__stats {
+      font-size: 4em;
+    }
+
+    &__description {
+      font-size: 0.8em;
+      text-align: center;
+    }
+  }
+  @include u.desktop {
+    &__logo {
+      width: 5rem;
+    }
+
+    &__stats {
+      font-size: 6em;
+    }
+
+    &__description {
+      font-size: 1.5em;
+    }
+  }
+}
+.messages {
+  margin-bottom: 9.8rem;
+  @include u.mobile {
+    &__logo {
+      width: 2.4rem;
+    }
+
+    &__stats {
+      font-size: 4em;
+    }
+
+    &__description {
+      font-size: 0.8em;
+      text-align: center;
+      margin: auto;
+      width: 6.9rem;
+    }
+  }
+  @include u.desktop {
+    &__logo {
+      width: 4.2rem;
+    }
+
+    &__stats {
+      font-size: 6em;
+    }
+
+    &__description {
+      font-size: 1.5em;
+    }
+  }
+}
+.section-grow-together {
+  display: flex;
+  background-color: v.$Very-Pale-Blue;
+  @include u.mobile {
+    @include u.Flex(null, null, center, column);
+    padding: 18rem 0;
+  }
+  @include u.desktop {
+    @include u.Flex(null, space-around, null, row-reverse);
+    height: 80rem;
+    margin-bottom: 0;
+    width: 100%;
+  }
+}
+
+.section-flowing-conversations {
+  display: flex;
+  background-color: v.$Very-Pale-Blue;
+  @include u.mobile {
+    @include u.Flex(null, null, center, column);
+    padding: 18rem 0;
+    background-image: url(../images/bg-section-bottom-mobile-1.svg),
+      url(../images/bg-section-top-mobile-2.svg);
+  }
+  @include u.desktop {
+    @include u.Flex(null, space-around, null, row);
+    height: 80rem;
+    margin-bottom: 0;
+    width: 100%;
+    background-image: url(../images/bg-section-bottom-desktop-1.svg),
+      url(../images/bg-section-top-desktop-2.svg);
+  }
+  background-repeat: no-repeat;
+  background-position-y: top, bottom;
+}
+.section-your-users {
+  display: flex;
+  background-color: v.$Very-Pale-Blue;
+  @include u.mobile {
+    @include u.Flex(null, null, center, column);
+    padding: 18rem 0;
+  }
+  @include u.desktop {
+    @include u.Flex(null, space-around, null, row-reverse);
+    height: 80rem;
+    margin-bottom: 0;
+    width: 100%;
+  }
+}
+
+.image-container {
+  @include u.mobile {
+    &__illustration {
+      width: 24.6rem;
+      margin-bottom: 7.8rem;
+    }
+  }
+  @include u.desktop {
+    &__illustration {
+      width: 52.7rem;
+      margin-bottom: 7.8rem;
+    }
+  }
+}
+
+.description {
+  &__title {
+    font-family: v.$Heading-Font;
+  }
+  @include u.mobile {
+    &__title {
+      font-size: 1.2em;
+      text-align: center;
+      margin-bottom: 1.2rem;
+    }
+
+    &__content {
+      text-align: center;
+      font-size: 0.9em;
+      width: 33rem;
+    }
+  }
+  @include u.desktop {
+    &__title {
+      font-size: 2.3em;
+      text-align: left;
+      margin-bottom: 1.2rem;
+    }
+
+    &__content {
+      text-align: left;
+      font-size: 1em;
+      width: 49.5rem;
+    }
+  }
+}
+
